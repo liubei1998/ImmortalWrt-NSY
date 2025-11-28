@@ -9,7 +9,7 @@ env:
   # REPO_URL: https://github.com/zhoufuli/immortalwrt-rk356x
   REPO_URL: https://github.com/liubei1998/immortalwrt-rk356x
   REPO_BRANCH: main
-  CONFIG_FILE: configs/g68.config
+  CONFIG_FILE: configs/g68_mtk_wifi.config
   DIY_SCRIPT: diy-mini.sh
   CLASH_KERNEL: arm64
   CACHE_TOOLCHAIN: true
