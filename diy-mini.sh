@@ -71,7 +71,7 @@ rm -rf feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/background/*
 
 
 # 为固件版本加上编译作者
-author="xiaomeng9597"
+author="liubei"
 sed -i "s/DISTRIB_DESCRIPTION.*/DISTRIB_DESCRIPTION='%D %V %C by ${author}'/g" package/base-files/files/etc/openwrt_release
 sed -i "s/OPENWRT_RELEASE.*/OPENWRT_RELEASE=\"%D %V %C by ${author}\"/g" package/base-files/files/usr/lib/os-release
 
