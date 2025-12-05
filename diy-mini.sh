@@ -90,6 +90,10 @@ sed -i "s/OPENWRT_RELEASE.*/OPENWRT_RELEASE=\"%D %V %C by ${author}\"/g" package
 # 最大连接数修改为65535
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
+# 修复 wifi-profile 与 wifi-scripts 包冲突
+if [ -f "package/mtk/drivers/wifi-profile/Makefile" ]; then
+	sed -i '/DEPENDS:=+wifi-dats/a\  CONFLICTS:=wifi-scripts' package/mtk/drivers/wifi-profile/Makefile
+fi
 
 # 集成CPU性能跑分脚本
 cp -f $GITHUB_WORKSPACE/configfiles/coremark/coremark-arm64 package/base-files/files/bin/coremark-arm64
