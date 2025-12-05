@@ -1,4 +1,4 @@
-# Config1 vs Config2 关键驱动差异分析报告
+# Config1(amlogic-s9xxx-openwrt/config/immortalwrt_master/config) vs Config2(ImmortalWrt-NSY/configs/g68.config) 关键驱动差异分析报告
 
 ## 设备信息
 - **SoC**: RK3568
@@ -94,4 +94,5 @@ config1无法开机的主要原因是选择了错误的平台（armsr）和bootl
 - 使用 `CONFIG_TARGET_rockchip_armv8_DEVICE_nsy_g68-plus=y`
 - 使用 `CONFIG_PACKAGE_u-boot-nsy-g68-plus-rk3568=y`
 - 使用 `CONFIG_PACKAGE_trusted-firmware-a-rk3568=y`
+
 
